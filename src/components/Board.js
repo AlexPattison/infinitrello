@@ -6,7 +6,7 @@ const Board = ({ title, body, children, state }) => {
   const Lists = children.map((nodeId) => {
     const { title, body, children } = state.nodes[nodeId];
 
-    return <List title={title} body={body} children={children} state={state} />
+    return <List title={title} body={body} children={children} state={state} key={nodeId}/>
   });
 
   return (

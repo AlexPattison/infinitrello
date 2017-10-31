@@ -6,7 +6,7 @@ const List = ({ title, body, children, state }) => {
   const Cards = children.map((nodeId) => {
     const { title, body } = state.nodes[nodeId];
 
-    return <Card title={title} body={body} />
+    return <Card title={title} body={body} key={nodeId}/>
   });
 
   return (
